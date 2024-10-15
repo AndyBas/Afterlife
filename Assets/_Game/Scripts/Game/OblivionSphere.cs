@@ -9,14 +9,13 @@ namespace AfterlifeTmp.Game
 {
 	public class OblivionSphere : Collectable
 	{
-		public static event Action OnCollect;
 
         #region COLLECTABLE
         protected override void Collect()
         {
             base.Collect();
 
-            OnCollect?.Invoke();
+            InvokeOnCollect(-1);
         }
         #endregion COLLECTABLE
     }

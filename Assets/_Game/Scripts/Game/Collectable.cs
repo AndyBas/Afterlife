@@ -12,6 +12,7 @@ namespace AfterlifeTmp.Game
     [RequireComponent(typeof(Collider))]
     public class Collectable : MonoBehaviour
     {
+        public static event Action<int> OnCollect;
         private Collider _collider;
 
         private void Awake()
@@ -40,6 +41,11 @@ namespace AfterlifeTmp.Game
             // Play particles
 
             Destroy(gameObject);
+        }
+
+        protected void InvokeOnCollect(int pValue)
+        {
+            OnCollect?.Invoke(pValue);
         }
     }
 }

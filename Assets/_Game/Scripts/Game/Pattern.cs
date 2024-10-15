@@ -12,7 +12,7 @@ namespace AfterlifeTmp.Game
 		[SerializeField] private MemoryCollectable _memory = null;
 
 		[Header("Procedural Purposes")]
-		[SerializeField, Range(1, 5)] private int _difficulty;
+		[SerializeField, Range(0, 5)] private int _difficulty = 1;
 
         public int Difficulty => _difficulty;
 

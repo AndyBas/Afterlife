@@ -44,7 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f64c66476fbc9648a4b362d54843444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _endPatternPrefab: {fileID: 2661653502307664866, guid: 01e42262450378248a13459edea89fcd,
+  _playerConveyor: {fileID: 0}
+  _player: {fileID: 0}
+  _camera: {fileID: 0}
+  _endPatternPrefab: {fileID: 8148679880498765965, guid: bf484a8127fecf946a0872bdd52d3366,
     type: 3}
   _startOffset: 10
   _devLvl: {fileID: 11400000, guid: 0f689f6806f273b4387cff9a4dfc9119, type: 2}

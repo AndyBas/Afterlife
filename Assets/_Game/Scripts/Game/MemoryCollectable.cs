@@ -10,7 +10,6 @@ namespace AfterlifeTmp.Game
 {
 	public class MemoryCollectable : Collectable
 	{
-        public static event Action OnCollect;
 
         [SerializeField] private float _timeDisappear = 0.5f;
 
@@ -20,7 +19,7 @@ namespace AfterlifeTmp.Game
         {
             base.Collect();
 
-            OnCollect?.Invoke();
+            InvokeOnCollect(1);
         }
 
         #endregion COLLECTABLE
