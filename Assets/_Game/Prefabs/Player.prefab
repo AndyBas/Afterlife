@@ -289,6 +289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6816544168086857385}
   - component: {fileID: 7752197022402523817}
+  - component: {fileID: 2122925225559711105}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -326,3 +327,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _params: {fileID: 11400000, guid: dc0300356df47644fa1af646291ebed3, type: 2}
   _mainCamera: {fileID: 0}
+  _bodies:
+  - {fileID: 5607444578834191468}
+--- !u!114 &2122925225559711105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8374214373884518019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 56456e1eace5340da9ff5bdd9bde8c5e,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7752197022402523817}
+        m_TargetAssemblyTypeName: Com.MorpheusLegacy.Afterlife.Player, GameScripts
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 351f2ccd-1f9f-44bf-9bec-d62ac5c5f408
+    m_ActionName: 'Player/Move[/Mouse/position,/Device Simulator Touchscreen/position]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7752197022402523817}
+        m_TargetAssemblyTypeName: Com.MorpheusLegacy.Afterlife.Player, GameScripts
+        m_MethodName: OnPress
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ca7d0025-4a7f-4024-96ff-d44d32356386
+    m_ActionName: 'Player/Press[/Mouse/press,/Device Simulator Touchscreen/press]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

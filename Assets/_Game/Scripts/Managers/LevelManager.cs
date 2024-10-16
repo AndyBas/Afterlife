@@ -117,6 +117,7 @@ namespace AfterlifeTmp.Managers
         {
             _endPattern.OnEndReached -= EndPattern_OnEndReached;
             _playerConveyor.ShouldMove(false);
+			_player.Passive();
             Debug.Log("Level Finished");
         }
 

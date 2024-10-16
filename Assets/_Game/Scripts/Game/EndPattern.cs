@@ -12,6 +12,8 @@ namespace AfterlifeTmp.Game
 	public class EndPattern : Pattern
     {
         public event Action OnEndReached;
+        [SerializeField] private GameObject _light;
+
         private ChildTrigger3D _childTrigger;
 
         private void Awake()
@@ -19,6 +21,8 @@ namespace AfterlifeTmp.Game
             _childTrigger = GetComponentInChildren<ChildTrigger3D>();
 
             _childTrigger.OnChildTriggerEnter += ChildTrigger_OnChildTriggerEnter;
+
+            _light.SetActive(true);
         }
 
         private void ChildTrigger_OnChildTriggerEnter(Collider pObj)

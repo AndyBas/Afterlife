@@ -12,7 +12,6 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _MK_ALBEDO_MAP
   - _MK_REFRACTION_DISTORTION_MAP
   - _MK_SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
@@ -31,6 +30,7 @@ Material:
     RenderType: Transparent
   disabledShaderPasses:
   - SHADOWCASTER
+  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -112,7 +112,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bff03ed78834d1f479ec42b01dd5b05f, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -234,6 +234,7 @@ Material:
     - _GlossyReflections: 1
     - _GoochRampIntensity: 0.5
     - _HatchingMapScale: 1
+    - _Hue: 0
     - _IndexOfRefraction: 0
     - _Initialized: 1
     - _InputTab: 1
