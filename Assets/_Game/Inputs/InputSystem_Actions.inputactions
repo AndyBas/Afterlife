@@ -20,8 +20,8 @@
                     "id": "ca7d0025-4a7f-4024-96ff-d44d32356386",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -39,7 +39,18 @@
                 {
                     "name": "",
                     "id": "ef8d31a5-bc12-4420-9730-73d1ab805f26",
-                    "path": "<Pointer>/press",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c5c38ae2-cfb9-46cd-967c-0afb20e71ca0",
+                    "path": "<Touchscreen>/Press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

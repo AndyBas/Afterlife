@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee268657314bb31448262baf4c5f120d, type: 3}
   m_Name: LevelSO_Debug
   m_EditorClassIdentifier: 
-  _conveyorSpeed: 5
+  _conveyorSpeed: 0
   _length: 10
   _patterns:
   - {fileID: -8557358926658955431, guid: 4ee61350518fb3748b34e3bf08dc5c69, type: 3}

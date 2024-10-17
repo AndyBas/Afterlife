@@ -22,6 +22,9 @@ namespace AfterlifeTmp.Game
 
         private void OnTriggerEnter(Collider other)
         {
+            if (other.GetComponent<IkDetectionSphere>() != null)
+                return;
+
             Player lPlayer = other.GetComponentInParent<Player>();
 
             if (lPlayer != null)

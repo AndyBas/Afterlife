@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6065860816825328320}
   - component: {fileID: 7487286793496153175}
   - component: {fileID: 9215982616921035202}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OblivionSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
