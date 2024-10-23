@@ -1,11 +1,12 @@
 # ninja log v5
-54	208	7507948278179955	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	a256d5503f62b585
-208	307	7507948279161228	C:/Users/didit/Travail/MorpheusLegacy/Afterlife/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/6xb4y6g2/obj/arm64-v8a/libswappywrapper.so	d307e4e17f2be73f
-30	472	7507948280763403	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	2b0b37255a033ac4
-46	479	7507948280848772	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	f8b879890b7344d7
-22	481	7507948280888983	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	fba546f7cc8231f
-15	488	7507948280948253	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	315e7e720f1b74d8
-0	503	7507948281093955	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	9b3594fff6b10424
-38	537	7507948281452188	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	cbc03066c17fb5b3
-8	568	7507948281728910	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	55bfd875db97a212
-568	645	7507948282532772	C:/Users/didit/Travail/MorpheusLegacy/Afterlife/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/6xb4y6g2/obj/arm64-v8a/libgame.so	8f7f28fbc3d314d
+76	390	7514032611678642	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	6b8f2a089d20318b
+392	564	7514032613362143	C:/Users/didit/Travail/MorpheusLegacy/Afterlife/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/6xb4y6g2/obj/arm64-v8a/libswappywrapper.so	8051c1fff2a5a057
+17	891	7514032616641086	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	e02d88da99ade9c0
+42	894	7514032616651086	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f875e9390e25dc7f
+53	912	7514032616851416	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	edfdbf056a76e8bd
+33	924	7514032616957382	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	32e7ae0cc2387c54
+65	925	7514032616977480	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	4b57087b83d7e0c2
+10	963	7514032617382916	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	e4e0b78a69e6ca35
+25	1015	7514032617884003	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	f20a005689710ba8
+1	1091	7514032618570409	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	e8f6f3dd6ff57d7e
+1092	1199	7514032619727156	C:/Users/didit/Travail/MorpheusLegacy/Afterlife/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/6xb4y6g2/obj/arm64-v8a/libgame.so	3011cece346eecb3

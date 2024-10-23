@@ -55,13 +55,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848267379375061623}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.9659258, y: 0, z: 0, w: 0.2588191}
   m_LocalPosition: {x: 1.3668354e-15, y: 0.6110125, z: -0.024162874}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8238744271971925910}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -150, y: 0, z: 0}
 --- !u!1 &1876108370659463765
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5063718266842337523}
   - component: {fileID: 7402604835577451242}
+  - component: {fileID: 7858924321719962608}
   - component: {fileID: 5203034366377975043}
   m_Layer: 6
   m_Name: IkDetectionSphere
@@ -532,7 +533,34 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 4.5}
+--- !u!54 &7858924321719962608
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8084518978576152991}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &5203034366377975043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,6 +575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 1955642861419969883}
   _smoothSpeed: 1
+  _rotaSmoothSpeed: 10
 --- !u!1 &8374214373884518019
 GameObject:
   m_ObjectHideFlags: 0

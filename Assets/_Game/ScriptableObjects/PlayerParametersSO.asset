@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlayerParametersSO
   m_EditorClassIdentifier: 
   _speed: 5
-  _rotaSpeed: 5
+  _rotaSpeed: 2.5
   _maxRadius: 3

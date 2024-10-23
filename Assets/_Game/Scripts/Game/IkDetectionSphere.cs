@@ -11,26 +11,57 @@ namespace AfterlifeTmp.Game
 	public class IkDetectionSphere : MonoBehaviour
 	{
         private const float _MIN_DIST_TARGET = 0.02f;
+        private const float _BASE_HEAD_X_ANGLE = -220f;
+        private const float _BASE_HEAD_Y_OFFSET = 20f;
 		[SerializeField] private Transform _target;
         [SerializeField] private float _smoothSpeed = 1f;
+        [SerializeField] private float _rotaSmoothSpeed = 180f;
 
-
+        private Transform _objectTracked;
         private Vector3 _localPos = Vector3.forward * 5;
 
         private void OnTriggerEnter(Collider other)
         {
-            Transform lOther = other.transform;
+            if (_objectTracked)
+                return;
 
-            _localPos = transform.InverseTransformPoint(lOther.position);
+            _objectTracked = other.transform;
+
+            TrackObject();
+        }
+
+        private void OnTriggerStay(Collider other)
+        {
+
+            // If there is no object tracked assign a new one
+            if (!_objectTracked)
+                _objectTracked = other.transform;
+            else if (other.transform != _objectTracked)
+                return;
+
+            TrackObject();
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.transform != _objectTracked)
+                return;
+
+            _objectTracked = null;
+            _localPos = Vector3.forward;
         }
 
         private void LateUpdate()
         {
-            if (Vector3.Distance(_localPos, _target.localPosition) < _MIN_DIST_TARGET)
-                return;
+            // Update the ik target position and rotation
+            Quaternion lTargetRota = Quaternion.AngleAxis(_BASE_HEAD_X_ANGLE, Vector3.right) * Quaternion.LookRotation(new Vector3(-_localPos.x, _localPos.y, _localPos.z));
+            _target.localPosition = Vector3.MoveTowards(_target.localPosition, _localPos + Vector3.up * _BASE_HEAD_Y_OFFSET, _smoothSpeed * Time.deltaTime);
+            _target.localRotation = Quaternion.Slerp(_target.localRotation, lTargetRota, _rotaSmoothSpeed * Time.deltaTime);
+        }
 
-            _target.localPosition = Vector3.MoveTowards(_target.localPosition, _localPos, _smoothSpeed * Time.deltaTime);
-            _target.forward = Quaternion.AngleAxis(-90f, Vector3.right) * _localPos.normalized;
+        private void TrackObject()
+        {
+            _localPos = transform.InverseTransformPoint(_objectTracked.position);
         }
     }
 }
