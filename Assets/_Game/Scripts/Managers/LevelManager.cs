@@ -26,8 +26,6 @@ namespace AfterlifeTmp.Managers
 		[SerializeField] private EndPattern _endPatternPrefab;
 		[SerializeField] private float _startOffset = 10f;
 
-		[Header("Development")]
-		[SerializeField] private LevelSO _devLvl;
 
 		private List<Pattern> _patternList = new List<Pattern>();
 		private EndPattern _endPattern;
@@ -54,12 +52,10 @@ namespace AfterlifeTmp.Managers
 
         private void Start()
         {
-            if(GameManager.Instance == null)
-			{
-				InitLevel(_devLvl);
-			}
-
             Collectable.OnCollect += Collectable_OnCollect;
+
+			_player.ShouldUseJoystick(GameManager.Instance.useJoystick);
+			
         }
 
         private void OnDestroy()
@@ -71,7 +67,7 @@ namespace AfterlifeTmp.Managers
             Collectable.OnCollect -= Collectable_OnCollect;
         }
 		#endregion UNITY
-        private void InitLevel(LevelSO pLvl)
+        public void InitLevel(LevelSO pLvl)
         {
 			List<Pattern> lPatterns = pLvl.PatternPrefabList;
 			int lCount = lPatterns.Count;
@@ -82,7 +78,6 @@ namespace AfterlifeTmp.Managers
 			bool lShouldDisplayMemory = false;
 
             // Patterns instantiation
-            // Je répartie équitablements les NB_MEMORY mémoires
 			for (int i = 0; i < lCount; i++)
 			{
 				lPattern = Instantiate(lPatterns[i]);
@@ -111,6 +106,13 @@ namespace AfterlifeTmp.Managers
 
 			// Temp
 			_playerConveyor.ShouldMove(true);
+
+            if (GameManager.Instance.useJoystick)
+            {
+				_player.SetScreenRadius(UiManager.Instance.GetJoystickRadius());
+
+                _player.OnPressed += Player_OnPressed;
+            }
         }
 
         private void EndPattern_OnEndReached()
@@ -164,5 +166,17 @@ namespace AfterlifeTmp.Managers
             _playerConveyor.ShouldMove(false);
 			_player.Die();
 		}
-	}
+
+        #region EVENTS
+        private void Player_OnPressed(bool pIsTouchingScreen, Vector2 pScreenPos)
+        {
+            if (pIsTouchingScreen)
+            {
+                UiManager.Instance.DisplayJoystickAt(pScreenPos);
+            }
+            else
+                UiManager.Instance.HideJoystick();
+        }
+        #endregion EVENTS
+    }
 }

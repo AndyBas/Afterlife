@@ -1,3 +1,4 @@
+using AfterlifeTmp.ScriptableObjects;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,6 +13,12 @@ namespace AfterlifeTmp.Managers
 
         public static GameManager Instance { get; private set; }
 
+        [Header("Development")]
+        [SerializeField] private LevelSO _devLvl;
+
+        [Header("AB Tests")]
+        public bool useJoystick = true;
+
         #region UNITY
         private void Awake()
         {
@@ -24,6 +31,11 @@ namespace AfterlifeTmp.Managers
                 Destroy(gameObject);
                 return;
             }
+        }
+
+        private void Start()
+        {
+            LevelManager.Instance.InitLevel(_devLvl);
         }
 
         private void OnDestroy()

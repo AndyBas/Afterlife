@@ -36,8 +36,12 @@ MonoBehaviour:
     - CFXRRuntime
     - Common
     - CSharpGeneratorDemo
+    - CW.Common
     - GameScripts
     - KinoBloom.Runtime
+    - LeanCommon
+    - LeanGUI
+    - LeanTransition
     - Lofelt.NiceVibrations
     - Lofelt.NiceVibrations.Demo
     - MK.Toon

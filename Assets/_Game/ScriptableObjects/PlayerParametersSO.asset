@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _rotaSpeed: 2.5
-  _maxRadius: 3
+  _maxRadius: 2.75
