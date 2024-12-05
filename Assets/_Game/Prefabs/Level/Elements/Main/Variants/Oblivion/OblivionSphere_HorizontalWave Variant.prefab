@@ -65,6 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 799912950250943729, guid: 47d303f0cc6a64b4a898b8147b4221c5,
         type: 3}
+      propertyPath: isLocal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 799912950250943729, guid: 47d303f0cc6a64b4a898b8147b4221c5,
+        type: 3}
       propertyPath: waveDir.x
       value: 1
       objectReference: {fileID: 0}
