@@ -15,6 +15,13 @@ namespace AfterlifeTmp.ScriptableObjects
 		[SerializeField] private float _length = 100.0f;
 		[SerializeField] private List<Pattern> _patterns = new List<Pattern>();
 
+		public LevelSO(float conveyorSpeed, float length, List<Pattern> patterns)
+        {
+            _conveyorSpeed = conveyorSpeed;
+            _length = length;
+            _patterns = patterns;
+        }
+
         public float ConveyorSpeed => _conveyorSpeed;
 		public float Length => _length;
 		public List<Pattern> PatternPrefabList => _patterns;

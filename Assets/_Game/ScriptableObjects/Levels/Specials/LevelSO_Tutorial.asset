@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee268657314bb31448262baf4c5f120d, type: 3}
-  m_Name: LevelSO_0
+  m_Name: LevelSO_Tutorial
   m_EditorClassIdentifier: 
   _conveyorSpeed: 5
   _length: 200

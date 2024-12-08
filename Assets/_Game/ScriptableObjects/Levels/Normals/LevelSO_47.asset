@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee268657314bb31448262baf4c5f120d, type: 3}
+  m_Name: LevelSO_47
+  m_EditorClassIdentifier: 
+  _conveyorSpeed: 2.943067
+  _length: 255.10152
+  _patterns:
+  - {fileID: -8557358926658955431, guid: 4ee61350518fb3748b34e3bf08dc5c69, type: 3}
+  - {fileID: -8557358926658955431, guid: 4ee61350518fb3748b34e3bf08dc5c69, type: 3}
+  - {fileID: 5002902386988537061, guid: 1c679292e79564541a2752244e9918dd, type: 3}
+  - {fileID: 5002902386988537061, guid: 1c679292e79564541a2752244e9918dd, type: 3}
+  - {fileID: 6789747453759866029, guid: 93f71cf4668a8f8418ac5432485760cf, type: 3}
+  - {fileID: 1576099883382493505, guid: 05100a6777a1dd24d9cb00e5c0eb1565, type: 3}
+  - {fileID: 3057348546941817226, guid: e394e86b1012cb743a88289d20f3fae7, type: 3}
+  - {fileID: 3057348546941817226, guid: e394e86b1012cb743a88289d20f3fae7, type: 3}
+  - {fileID: -8557358926658955431, guid: 4ee61350518fb3748b34e3bf08dc5c69, type: 3}
+  - {fileID: 3057348546941817226, guid: e394e86b1012cb743a88289d20f3fae7, type: 3}
+  - {fileID: 1576099883382493505, guid: 05100a6777a1dd24d9cb00e5c0eb1565, type: 3}
+  - {fileID: 2661653502307664866, guid: 01e42262450378248a13459edea89fcd, type: 3}
+  - {fileID: 5002902386988537061, guid: 1c679292e79564541a2752244e9918dd, type: 3}
+  - {fileID: 3057348546941817226, guid: e394e86b1012cb743a88289d20f3fae7, type: 3}
+  - {fileID: -8557358926658955431, guid: 4ee61350518fb3748b34e3bf08dc5c69, type: 3}
+  - {fileID: 6789747453759866029, guid: 93f71cf4668a8f8418ac5432485760cf, type: 3}
+  - {fileID: 1576099883382493505, guid: 05100a6777a1dd24d9cb00e5c0eb1565, type: 3}
+  - {fileID: 3057348546941817226, guid: e394e86b1012cb743a88289d20f3fae7, type: 3}
+  - {fileID: 1576099883382493505, guid: 05100a6777a1dd24d9cb00e5c0eb1565, type: 3}
