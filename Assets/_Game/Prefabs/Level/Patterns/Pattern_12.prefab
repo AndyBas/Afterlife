@@ -31,6 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6915450683117524771}
+  - {fileID: 1811371229242757126}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3057348546941817226
@@ -45,8 +46,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e95f3158edce4764f85331a4715fb362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _memory: {fileID: 1829450861874098128}
+  _memory: {fileID: 4109841450325418773}
+  _trigger: {fileID: 0}
   _difficulty: 1
+--- !u!1001 &4233666753578711943
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 950705543551517673}
+    m_Modifications:
+    - target: {fileID: 2585710441725438849, guid: 124b95b63e016cd49a65c60502a4f2dc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585710441725438849, guid: 124b95b63e016cd49a65c60502a4f2dc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585710441725438849, guid: 124b95b63e016cd49a65c60502a4f2dc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585710441725438849, guid: 124b95b63e016cd49a65c60502a4f2dc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585710441725438849, guid: 124b95b63e016cd49a65c60502a4f2dc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585710441725438849, guid: 124b95b63e016cd49a65c60502a4f2dc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585710441725438849, guid: 124b95b63e016cd49a65c60502a4f2dc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585710441725438849, guid: 124b95b63e016cd49a65c60502a4f2dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585710441725438849, guid: 124b95b63e016cd49a65c60502a4f2dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585710441725438849, guid: 124b95b63e016cd49a65c60502a4f2dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409329773920341912, guid: 124b95b63e016cd49a65c60502a4f2dc,
+        type: 3}
+      propertyPath: m_Name
+      value: PatternTrigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 124b95b63e016cd49a65c60502a4f2dc, type: 3}
+--- !u!4 &1811371229242757126 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2585710441725438849, guid: 124b95b63e016cd49a65c60502a4f2dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4233666753578711943}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8304943006862872323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115,18 +191,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d804da3091e46d46aea32956175ef97, type: 3}
---- !u!114 &1829450861874098128 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7647840544334586067, guid: 1d804da3091e46d46aea32956175ef97,
+--- !u!1 &4109841450325418773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5352531111970843670, guid: 1d804da3091e46d46aea32956175ef97,
     type: 3}
   m_PrefabInstance: {fileID: 8304943006862872323}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 588cdc785dd868d40bdc2aa118375e25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &6915450683117524771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3222756990751004704, guid: 1d804da3091e46d46aea32956175ef97,

@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2OblivionRotator Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4214241561020465435, guid: 1623319540829b34ab5bba87e27c2bf7,
+        type: 3}
+      propertyPath: speed
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 6508729371926671511, guid: 1623319540829b34ab5bba87e27c2bf7,
         type: 3}
       propertyPath: m_IsActive

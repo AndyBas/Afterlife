@@ -7,7 +7,7 @@ using System;
 using UnityEngine;
 
 namespace Com.AndyBastel.ExperimentLab.Common.Collisions {
-	//[RequireComponent(typeof(Collider))]
+	[RequireComponent(typeof(Collider))]
 	/// <summary>
 	/// This class permit to send events when the collider of this MonoBehaviour is triggered (Is Trigger must be checked in the collider component).
 	/// </summary>

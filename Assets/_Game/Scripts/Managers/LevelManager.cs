@@ -33,6 +33,8 @@ namespace AfterlifeTmp.Managers
 		private int _curNbOblivion = 0;
 		private int _curNbMemory = 0;	
 
+		private bool _hasLevelStarted = false;	
+
 		private float MemoryRatio => (float)_curNbMemory / NB_MEMORY;
 		private float OblivionRatio => (float)_curNbOblivion / NB_OBLIVION;
 
@@ -56,6 +58,13 @@ namespace AfterlifeTmp.Managers
 
 			_player.ShouldUseJoystick(GameManager.Instance.useJoystick);
 			
+        }
+
+        private void Update()
+        {
+			if (!_hasLevelStarted) return;
+
+
         }
 
         private void OnDestroy()
@@ -105,37 +114,25 @@ namespace AfterlifeTmp.Managers
 			_playerConveyor.InitSpeed(pLvl.ConveyorSpeed);
 
 			// Temp
-			_playerConveyor.ShouldMove(true);
+			StartLevel();
+        }
+
+		private void StartLevel()
+		{
+
+            _playerConveyor.ShouldMove(true);
 
             if (GameManager.Instance.useJoystick)
             {
-				_player.SetScreenRadius(UiManager.Instance.GetJoystickRadius());
+                _player.SetScreenRadius(UiManager.Instance.GetJoystickRadius());
 
                 _player.OnPressed += Player_OnPressed;
             }
+
+            _hasLevelStarted = true;
         }
 
-        private void EndPattern_OnEndReached()
-        {
-            _endPattern.OnEndReached -= EndPattern_OnEndReached;
-            _playerConveyor.ShouldMove(false);
-			_player.Passive();
-            Debug.Log("Level Finished");
-        }
-
-        private void Collectable_OnCollect(int pVal)
-        {
-            // If it is a positive collectable
-            if (pVal > 0)
-            {
-                CollectMemory();
-            }
-            // If it is a negative collectable
-            else
-            {
-                CollectOblivion();
-            }
-        }
+        #region COLLECTABLES
 
         private void CollectOblivion()
         {
@@ -159,6 +156,9 @@ namespace AfterlifeTmp.Managers
 			_player.MemoryChange(MemoryRatio);
 		}
 
+        #endregion COLLECTABLES
+
+        #region FLOW
         private void PlayerDeath()
         {
             _endPattern.OnEndReached -= EndPattern_OnEndReached;
@@ -166,6 +166,8 @@ namespace AfterlifeTmp.Managers
             _playerConveyor.ShouldMove(false);
 			_player.Die();
 		}
+
+        #endregion FLOW
 
         #region EVENTS
         private void Player_OnPressed(bool pIsTouchingScreen, Vector2 pScreenPos)
@@ -176,6 +178,27 @@ namespace AfterlifeTmp.Managers
             }
             else
                 UiManager.Instance.HideJoystick();
+        }
+		private void EndPattern_OnEndReached()
+        {
+            _endPattern.OnEndReached -= EndPattern_OnEndReached;
+            _playerConveyor.ShouldMove(false);
+			_player.Passive();
+            Debug.Log("Level Finished");
+        }
+
+        private void Collectable_OnCollect(int pVal)
+        {
+            // If it is a positive collectable
+            if (pVal > 0)
+            {
+                CollectMemory();
+            }
+            // If it is a negative collectable
+            else
+            {
+                CollectOblivion();
+            }
         }
         #endregion EVENTS
     }

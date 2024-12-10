@@ -23,6 +23,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: 1OblivionRotator Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5452754130572446130, guid: 0761a96dea059344996f2698576f6899,
+        type: 3}
+      propertyPath: speed
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452754130572446130, guid: 0761a96dea059344996f2698576f6899,
+        type: 3}
+      propertyPath: isLocal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7457113166877012476, guid: 0761a96dea059344996f2698576f6899,
         type: 3}
       propertyPath: m_LocalPosition.x

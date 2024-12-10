@@ -11,8 +11,6 @@ namespace AfterlifeTmp.Game
 	public class MemoryCollectable : Collectable
 	{
 
-        [SerializeField] private float _timeDisappear = 0.5f;
-
 
         #region COLLECTABLE
         protected override void Collect()
@@ -22,6 +20,10 @@ namespace AfterlifeTmp.Game
             InvokeOnCollect(1);
         }
 
+        protected override void CollectFeedbacks()
+        {
+            FeelTools.ScaleDisappear(transform.GetChild(0), _scaleTimeDisappear, callBack: () => { gameObject.SetActive(false); }, shouldDeactivate:false);
+        }
         #endregion COLLECTABLE
     }
 }

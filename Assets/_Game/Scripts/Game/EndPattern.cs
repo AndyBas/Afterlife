@@ -14,20 +14,19 @@ namespace AfterlifeTmp.Game
         public event Action OnEndReached;
         [SerializeField] private GameObject _light;
 
-        private ChildTrigger3D _childTrigger;
 
-        private void Awake()
+        override protected void Awake()
         {
-            _childTrigger = GetComponentInChildren<ChildTrigger3D>();
+            base.Awake();
 
-            _childTrigger.OnChildTriggerEnter += ChildTrigger_OnChildTriggerEnter;
+            _trigger.OnChildTriggerEnter += ChildTrigger_OnChildTriggerEnter;
 
             _light.SetActive(true);
         }
 
         private void ChildTrigger_OnChildTriggerEnter(Collider pObj)
         {
-            _childTrigger.OnChildTriggerEnter -= ChildTrigger_OnChildTriggerEnter;
+            _trigger.OnChildTriggerEnter -= ChildTrigger_OnChildTriggerEnter;
 
             Player lPlayer = pObj.GetComponentInParent<Player>();
 

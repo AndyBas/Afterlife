@@ -15,7 +15,7 @@ namespace AfterlifeTmp.Game
         public static event Action<int> OnCollect;
         private Collider _collider;
 
-        [SerializeField] private float _scaleTimeDisappear = 0.5f;
+        [SerializeField] protected float _scaleTimeDisappear = 0.5f;
 
         private void Awake()
         {
@@ -37,19 +37,25 @@ namespace AfterlifeTmp.Game
 
         virtual protected void Collect()
         {
-            _collider.enabled = true;
+            _collider.enabled = false;
+            transform.parent = null;
 
             CollectFeedbacks();
         }
         virtual protected void CollectFeedbacks()
         {
             // Play particles
-            FeelTools.ScaleDisappear(transform, _scaleTimeDisappear);
+            FeelTools.ScaleDisappear(transform, _scaleTimeDisappear,callBack: ResetObject );
         }
 
         protected void InvokeOnCollect(int pValue)
         {
             OnCollect?.Invoke(pValue);
+        }
+
+        virtual protected void ResetObject()
+        {
+            _collider.enabled = true;
         }
     }
 }

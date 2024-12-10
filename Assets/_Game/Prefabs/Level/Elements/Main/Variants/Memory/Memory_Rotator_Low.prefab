@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9c9e6138d5ecf43846486503823233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 360
+  speed: 180
   isLocal: 1
   axis: {x: 0, y: 0, z: 1}
 --- !u!1001 &2621366501608727510
