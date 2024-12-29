@@ -1,0 +1,32 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Common/UiToolkit/USS/Common.uss?fileID=7433441132597879392&amp;guid=1f96300cba14f244ea343bb596ad87b6&amp;type=3#Common" />
+    <engine:VisualElement name="Root" style="flex-grow: 1; align-items: center; justify-content: center;">
+        <engine:VisualElement name="Background" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.31); position: absolute; width: 100%; height: 100%;" />
+        <engine:VisualElement name="PopUp" style="flex-grow: 0; width: 75%; height: 1400px; align-self: center; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-top-width: 15px; border-right-width: 15px; border-bottom-width: 15px; border-left-width: 15px; background-color: rgba(0, 214, 255, 0.24);">
+            <engine:VisualElement name="TopContainer" style="flex-grow: 1; flex-direction: row; justify-content: flex-end; align-items: center; align-self: auto;">
+                <engine:Label text="SETTINGS" parse-escape-sequences="false" name="Label" style="align-self: center; font-size: 99px; color: rgb(255, 255, 255); padding-left: 2px; padding-right: 110px;">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:b59fc9fcd28c8b646b74da646da20332" entry="Id(57096564736)" />
+                    </Bindings>
+                </engine:Label>
+                <engine:Button name="ButtonCloseSettings" class="button-transparent" style="margin-left: 4px; margin-right: 50px; width: 100px; height: 100px; background-image: url(&quot;project://database/Assets/HONETi/fullscreen_gui/icons/512x512/x.png?fileID=2800000&amp;guid=0f7f70a3321a6a54f89f910c3b35dad4&amp;type=3#x&quot;); background-size: 60% 60%;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="SettingContainer" style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: space-around;">
+                <engine:Label text="Volume" style="font-size: 75px; color: rgb(255, 255, 255);">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:b59fc9fcd28c8b646b74da646da20332" entry="Id(585935384576)" />
+                    </Bindings>
+                </engine:Label>
+                <engine:Button name="ButtonVolume" class="button-square button-transparent text-big" style="background-image: url(&quot;project://database/Assets/HONETi/fullscreen_gui/icons/128x128/speaker_high.png?fileID=2800000&amp;guid=b2de47337c7332b44aed6c7818b4e41c&amp;type=3#speaker_high&quot;); background-size: 75% 75%;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="SettingContainer" style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: space-around;">
+                <engine:Label text="Language" style="font-size: 75px; color: rgb(255, 255, 255);">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:b59fc9fcd28c8b646b74da646da20332" entry="Id(783990419456)" />
+                    </Bindings>
+                </engine:Label>
+                <engine:Button name="ButtonLanguage" class="button-square button-transparent text-big" style="background-image: url(&quot;project://database/Assets/_Game/Textures/Sprites/Flags/Flag_of_the_United_Kingdom.png?fileID=2800000&amp;guid=06dc21f0e4dfb3d42afe2f54daa5234c&amp;type=3#Flag_of_the_United_Kingdom&quot;);" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

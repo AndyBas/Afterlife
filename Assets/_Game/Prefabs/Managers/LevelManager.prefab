@@ -50,4 +50,4 @@ MonoBehaviour:
   _endPatternPrefab: {fileID: 8148679880498765965, guid: bf484a8127fecf946a0872bdd52d3366,
     type: 3}
   _startOffset: 10
-  _devLvl: {fileID: 11400000, guid: 0f689f6806f273b4387cff9a4dfc9119, type: 2}
+  _endTimeToReachLight: 1.5

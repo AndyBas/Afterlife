@@ -1,0 +1,67 @@
+.button {
+    font-size: 45px;
+    width: 500px;
+    height: 200px;
+    background-color: rgb(189, 227, 255);
+    -unity-text-outline-width: 1px;
+    -unity-text-outline-color: rgba(0, 0, 0, 0);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+}
+
+.core-container {
+    flex-grow: 1;
+    max-width: 90%;
+    min-width: 60%;
+    max-height: 40%;
+    min-height: 800px;
+    align-self: center;
+    justify-content: flex-start;
+    align-content: auto;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.star-visual {
+    background-color: rgba(244, 255, 0, 0);
+    background-image: url("project://database/Assets/HONETi/fullscreen_gui/icons/128x128/star.png?fileID=2800000&guid=5fceb93137214cb42ab1b686e14d0a75&type=3#star");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.text-big {
+    font-size: 80px;
+}
+
+.stars-container {
+    background-color: rgba(123, 123, 123, 0.69);
+    flex-grow: 0;
+    width: 100%;
+    height: auto;
+    flex-basis: 20%;
+    max-height: 20%;
+    min-height: 300px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.text-container {
+    background-color: rgba(123, 123, 123, 0.69);
+    flex-grow: 0;
+    width: 100%;
+    height: auto;
+    flex-basis: 20%;
+    max-height: 20%;
+    min-height: 300px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    bottom: 0;
+    align-self: flex-end;
+}

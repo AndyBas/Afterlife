@@ -1,0 +1,30 @@
+.text-big {
+    font-size: 45px;
+    -unity-font-style: bold;
+}
+
+.button-square {
+    width: 200px;
+    height: 200px;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.button-transparent:active {
+    background-color: rgba(0, 222, 255, 0.59);
+    scale: 0.9 0.9;
+}
+
+.button-transparent {
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    border-top-width: 12px;
+    border-right-width: 12px;
+    border-bottom-width: 12px;
+    border-left-width: 12px;
+    color: rgb(255, 255, 255);
+    transition-duration: 0.2s;
+}

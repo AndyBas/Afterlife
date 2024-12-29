@@ -1,0 +1,18 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="LevelSelection" src="project://database/Assets/_Game/UiToolkit/LevelSelection.uxml?fileID=9197481963319205126&amp;guid=ff41b166b0ea3b1468db4126b36992db&amp;type=3#LevelSelection" />
+    <engine:Template name="SettingsScreen" src="project://database/Assets/_Game/UiToolkit/SettingsScreen.uxml?fileID=9197481963319205126&amp;guid=7538e6b209ad10a42a8018a1c17de3b3&amp;type=3#SettingsScreen" />
+    <Style src="project://database/Assets/_Common/UiToolkit/USS/Common.uss?fileID=7433441132597879392&amp;guid=1f96300cba14f244ea343bb596ad87b6&amp;type=3#Common" />
+    <engine:VisualElement name="SafeArea" style="flex-grow: 1;">
+        <engine:VisualElement name="TopContainer" style="flex-grow: 1; align-self: center; width: 100%; max-height: 500px; margin-right: 0; padding-right: 65px; padding-top: 50px; padding-left: 65px; flex-direction: row; align-items: center; justify-content: space-between;">
+            <engine:Button name="ButtonShop" class="button-square text-big button-transparent" style="max-width: 200px; max-height: 200px; min-height: 100px; min-width: 100px; background-image: url(&quot;project://database/Assets/HONETi/fullscreen_gui/icons/256x256/basket.png?fileID=2800000&amp;guid=a078aa9611c98a84abefc2b923c6de6d&amp;type=3#basket&quot;); background-size: 60% 60%;" />
+            <engine:Button name="ButtonSettings" class="button-square text-big button-transparent" style="max-width: 200px; max-height: 200px; min-height: 100px; min-width: 100px; background-image: url(&quot;project://database/Assets/HONETi/fullscreen_gui/icons/128x128/settings.png?fileID=2800000&amp;guid=17563a8d36f548a448753f0f94f35ddb&amp;type=3#settings&quot;); background-size: 60% 60%;" />
+        </engine:VisualElement>
+        <engine:Button text="PLAY" name="ButtonPlay" class="text-big button-transparent" style="width: 300px; height: 150px; align-self: center; top: auto; bottom: -50%;">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:b59fc9fcd28c8b646b74da646da20332" entry="Id(2237304172544)" />
+            </Bindings>
+        </engine:Button>
+        <engine:Instance template="LevelSelection" name="LevelSelection" style="width: 100%; height: 100%; position: absolute; transition-duration: 3s; display: none;" />
+        <engine:Instance template="SettingsScreen" name="Settings" style="position: absolute; width: 100%; height: 100%;" />
+    </engine:VisualElement>
+</engine:UXML>

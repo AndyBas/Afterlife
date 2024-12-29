@@ -37,6 +37,7 @@ MonoBehaviour:
     - Common
     - CSharpGeneratorDemo
     - CW.Common
+    - EasySave3
     - GameScripts
     - KinoBloom.Runtime
     - LeanCommon

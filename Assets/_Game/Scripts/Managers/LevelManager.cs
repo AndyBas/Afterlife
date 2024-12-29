@@ -26,6 +26,8 @@ namespace AfterlifeTmp.Managers
 		[SerializeField] private EndPattern _endPatternPrefab;
 		[SerializeField] private float _startOffset = 10f;
 
+		[Header("End")]
+		[SerializeField] private float _endTimeToReachLight = 0.75f;
 
 		private List<Pattern> _patternList = new List<Pattern>();
 		private EndPattern _endPattern;
@@ -184,7 +186,11 @@ namespace AfterlifeTmp.Managers
             _endPattern.OnEndReached -= EndPattern_OnEndReached;
             _playerConveyor.ShouldMove(false);
 			_player.Passive();
-            Debug.Log("Level Finished");
+			_player.GoTowards(_endPattern.EndPoint, _endTimeToReachLight);
+
+			UiManager.Instance.HideJoystick();
+			UiManager.Instance.FadeInWhiteScreen(_endTimeToReachLight);
+
         }
 
         private void Collectable_OnCollect(int pVal)

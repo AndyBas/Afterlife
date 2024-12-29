@@ -14,19 +14,18 @@ namespace AfterlifeTmp.Game
         public event Action OnEndReached;
         [SerializeField] private GameObject _light;
 
+        public Vector3 EndPoint => _light.transform.position;
 
         override protected void Awake()
         {
             base.Awake();
 
-            _trigger.OnChildTriggerEnter += ChildTrigger_OnChildTriggerEnter;
-
             _light.SetActive(true);
         }
 
-        private void ChildTrigger_OnChildTriggerEnter(Collider pObj)
+        protected override void Trigger_OnChildTriggerExit(Collider pObj)
         {
-            _trigger.OnChildTriggerEnter -= ChildTrigger_OnChildTriggerEnter;
+            _trigger.OnChildTriggerExit -= Trigger_OnChildTriggerExit;
 
             Player lPlayer = pObj.GetComponentInParent<Player>();
 

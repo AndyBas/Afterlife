@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee268657314bb31448262baf4c5f120d, type: 3}
   m_Name: LevelSO_1
   m_EditorClassIdentifier: 
-  _conveyorSpeed: 1
+  _conveyorSpeed: 3
   _length: 50
   _patterns:
   - {fileID: 5002902386988537061, guid: 1c679292e79564541a2752244e9918dd, type: 3}

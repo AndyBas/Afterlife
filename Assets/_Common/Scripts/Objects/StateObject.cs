@@ -29,10 +29,8 @@ namespace Com.AndyBastel.ExperimentLab.Common.Objects {
             DoAction = DoActionVoid;
         }
 
-        virtual protected void DoActionVoid()
-        {
+        virtual protected void DoActionVoid(){}
 
-        }
         virtual protected void SetModeNormal()
         {
             DoAction = DoActionNormal;

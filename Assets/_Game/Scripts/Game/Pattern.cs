@@ -32,7 +32,7 @@ namespace AfterlifeTmp.Game
             _trigger.OnChildTriggerExit += Trigger_OnChildTriggerExit;
         }
 
-        private void Trigger_OnChildTriggerExit(Collider pObj)
+        virtual protected void Trigger_OnChildTriggerExit(Collider pObj)
         {
 			Player lPlayer = pObj.GetComponentInParent<Player>();
 

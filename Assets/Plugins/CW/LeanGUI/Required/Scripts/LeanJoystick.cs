@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
 using Lean.Transition;
 using CW.Common;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 namespace Lean.Gui
 {

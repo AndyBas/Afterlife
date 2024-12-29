@@ -36,6 +36,7 @@ namespace Com.MorpheusLegacy.Afterlife
         bool _useJoystick;
         private float _joystickRadius;
 
+        #region UNITY
         private void Awake()
         {
             _body = _bodies[0];
@@ -46,18 +47,9 @@ namespace Com.MorpheusLegacy.Afterlife
             SetMemoriesRatioShader(0);
         }
 
+        #endregion UNITY
 
-
-        private void SetMemoriesRatioShader(float pVal)
-        {
-            _material.SetFloat(_MEMORIES_RATIO_SG, pVal);
-        }
-
-        private void SetOblivionRatioShader(float pVal)
-        {
-            _material.SetFloat(_OBLIVION_RATIO_SG, pVal);
-        }
-
+        #region ACTIONS
         protected override void DoActionNormal()
         {
             base.DoActionNormal();
@@ -70,7 +62,10 @@ namespace Com.MorpheusLegacy.Afterlife
             RotateUpTowards(lMoveTowardsTarget);
         }
 
+        #endregion ACTIONS
 
+
+        #region ROTATION
         private void RotateUpTowards(Vector3 pTowardsTarget)
         {
             Vector3 lDir = pTowardsTarget.normalized;
@@ -98,11 +93,20 @@ namespace Com.MorpheusLegacy.Afterlife
             transform.up = Vector3.Lerp(transform.up, lDir, _params.RotaSpeed * Time.deltaTime);
         }
 
-        public void Move(Vector3 pMoveVec)
+        #endregion ROTATION
+
+
+        #region APPEARANCE
+
+        private void SetMemoriesRatioShader(float pVal)
         {
-            transform.localPosition += pMoveVec;
+            _material.SetFloat(_MEMORIES_RATIO_SG, pVal);
         }
 
+        private void SetOblivionRatioShader(float pVal)
+        {
+            _material.SetFloat(_OBLIVION_RATIO_SG, pVal);
+        }
         public void OblivionChange(float pOblivionRatio)
         {
             // Play effects 
@@ -117,7 +121,8 @@ namespace Com.MorpheusLegacy.Afterlife
             SetMemoriesRatioShader(pMemoryRatio);
             // Play get animations
         }
-
+        #endregion APPEARANCE
+        #region DEATH
         public void Die()
         {
             Passive();
@@ -125,22 +130,14 @@ namespace Com.MorpheusLegacy.Afterlife
             // Play anim & effects
         }
 
-        public void OnMove(UnityEngine.InputSystem.InputAction.CallbackContext pValue)
+        #endregion DEATH
+
+        #region MOVEMENTS
+
+        public void Move(Vector3 pMoveVec)
         {
-            if (!_isTouchingScreen)
-                return;
-
-            if (_useJoystick)
-            {
-                MoveAsJoystick(pValue.ReadValue<Vector2>());
-            }
-            else
-            {
-                MoveAsFollower(pValue.ReadValue<Vector2>());
-            }
-
+            transform.localPosition += pMoveVec;
         }
-
         private void MoveAsJoystick(Vector2 pValue)
         {
             _inputMousePos = pValue;
@@ -165,6 +162,45 @@ namespace Com.MorpheusLegacy.Afterlife
             _worldTargetPos = new Vector3(lClampedXYPlane.x, lClampedXYPlane.y, _worldTargetPos.z);
         }
 
+        public void GoTowards(Vector3 pTargetPoint, float pTime)
+        {
+            StartCoroutine(GoTowardsRoutine(pTargetPoint, pTime));
+        }
+
+        private System.Collections.IEnumerator GoTowardsRoutine(Vector3 pTargetPoint, float pTime)
+        {
+            float lElT = 0f;
+            Vector3 lInitPos = transform.position;
+            Vector3 lMiddlePoint = new Vector3(lInitPos.x, pTargetPoint.y, (lInitPos.z + pTargetPoint.z) / 2);
+
+            while (lElT < pTime)
+            {
+                transform.position = BezierCurve.ComputeQuadraticBezierCurve(lInitPos, pTargetPoint, lMiddlePoint, lElT / pTime);
+                lElT += Time.deltaTime;
+                yield return null;
+            }
+
+            transform.position = pTargetPoint;
+        }
+        #endregion MOVEMENTS
+
+        #region INPUTS
+
+        public void OnMove(UnityEngine.InputSystem.InputAction.CallbackContext pValue)
+        {
+            if (!_isTouchingScreen)
+                return;
+
+            if (_useJoystick)
+            {
+                MoveAsJoystick(pValue.ReadValue<Vector2>());
+            }
+            else
+            {
+                MoveAsFollower(pValue.ReadValue<Vector2>());
+            }
+
+        }
         public void OnPress(UnityEngine.InputSystem.InputAction.CallbackContext pValue)
         {
             _isTouchingScreen = pValue.ReadValue<float>() > 0.5f;
@@ -178,6 +214,8 @@ namespace Com.MorpheusLegacy.Afterlife
 
             OnPressed?.Invoke(_isTouchingScreen, lTouchPos);
         }
+        #endregion INPUTS
+
 
         #region AB TESTS
         public void ShouldUseJoystick(bool pUseJoystick)
